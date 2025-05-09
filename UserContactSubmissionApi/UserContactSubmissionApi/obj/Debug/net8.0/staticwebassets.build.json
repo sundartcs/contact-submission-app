@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "wl1X1xGmn9r+7EuzjlfkT6MT2nKq+xj2qeFvJQYOe6Y=",
+  "Source": "UserContactSubmissionApi",
+  "BasePath": "_content/UserContactSubmissionApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./UserContactSubmissionFrontEnd/contactsubmissionfrontend
+      dockerfile: ../../Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - contactapp-net
+
+  backend:
+    build:
+      context: ./UserContactSubmissionApi/UserContactSubmissionApi
+      dockerfile: ../../Dockerfile.backend
+    ports:
+      - "5000:5000"
+      - "5159:5159"
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - contactapp-net
+    environment:
+      - ASPNETCORE_URLS=http://+:5159
+      #- ConnectionStrings__DefaultConnection=Host=your-db-host;Port=5432;Database=yourdb;Username=user;Password=pass # Optional for PostgreSQL
+      - ConnectionStrings__DefaultConnection=Server=(localdb)\\ProjectModels;Database=contactsdb;Trusted_Connection=True;MultipleActiveResultSets=true
+
+networks:
+  contactapp-net:
+    driver: bridge

@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "UserContactSubmissionApi.Controllers.ContactsController",
+    "Method": "Create",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contact",
+        "Type": "UserContactSubmissionApi.Models.Contact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserContactSubmissionApi.Controllers.ContactsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Contacts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
